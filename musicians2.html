@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+</head>
+<body>
+
+<div class="top">
+</div>
+<div class="title">
+<div class="header" style="height:130px">
+	<div class="logo">
+		<img src="images\logo.jpg" style="height:85px; width:85px">
+	</div>
+
+	<div class="name">
+		<b>Townsville Music</b>
+	</div>
+
+	
+
+</div>
+</div>
+
+<div class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="about.html">About us</a>
+			<a href="events.html">concerts</a>
+			<a href="bulletin.html">Bulletins</a>
+			<a href="music1.html">Artists</a>
+			<a href="membersarea.html">Sign up</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="black">
+</div>
+
+<div class="info">
+<p><h4> We have performance opportunities
+available throughout 2017
+for local musicians and organisations.</h4></p>
+</div>
+
+<div class='container'>
+
+	<div >
+	<div style="float: left">
+		<img src="images\Rosewood01.jpg" style="height:200px; width:200px">
+	</div>
+	<div style="padding-left: 20%" >
+	<p> <b>Rosewood</b><br><br>
+		Add some elegance to your next social event!
+		Have the Rosewood Guitar Quartet provide that special atmosphere by playing for your guests
+		Sample CD available on request
+		Phone: 0427 255 125
+		or email Joanne
+			
+			</p >
+	<div style="clear: left"></div>
+	</div>
+
+
+
+	</div>
+</div>
+
+<div id="footer" style="position: fixed;bottom: 0px">
+Copyright Received
+</div>
+
+
+
+
+<script >
+	console.log("abc");
+	
+	if (!(localStorage.getItem("username") == null)) {
+		document.getElementById("login").innerHTML ="<h3 style='color:#000000'>Welcome,"+ localStorage.getItem("username")+"</h3>"+"<button onclick="+"logout()"+">Logout</button>";
+	}
+
+function save(){
+	var x = document.getElementById("username").value;
+	localStorage.setItem("username", x);
+	location.reload();
+	
+}
+function logout(){
+	localStorage.removeItem("username");
+	console.log("clear");
+	location.reload();
+}
+function btntest_onclick() 
+{
+    window.location.href = "membersarea.html";
+}
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+</html>

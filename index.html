@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+</head>
+<body>
+	<div class="total">
+
+<div class="top">
+</div>
+<div class="title">
+<div class="header" style="height:130px">
+	<div class="logo">
+		
+	</div>
+
+	<div class="name">
+		<b>Townsville Music</b>
+	</div>
+
+	
+
+</div>
+</div>
+
+<div class="topnav" id="myTopnav">
+			<a href="index.html">Home</a>
+			<a href="about.html">About us</a>
+			<a href="events.html">Concerts</a>
+			<a href="bulletin.html">Bulletin Board</a>
+			<a href="music1.html">Artists</a>
+			<a href="membersarea.html">sign up</a>
+		<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="black">
+</div>
+
+<div class="intro">
+	<div class="intro1">
+	<center>
+	<p style="font-size:28px">Townsville Community Music Centre </p>
+	<p style="font-size:16px">Based in Townsville, North Qld, the Music Centre presents concerts and workshops throughout the year, in a diverse range of genres including classical, jazz, folk, blues, world and contemporary music, featuring touring artists and locally-based professional and emerging artists.</p>
+	</center>
+	</div>
+
+	<div class="intro1">
+	<center>
+	<p style="font-size:24px">Members Advantages</p>
+	<p style="font-size:16px">You can support the Music Centre by becoming a Member and derive some benefits for yourself at the same time. Your subscription helps to keep us operating and we provide substantial discounts whenever possible.<br><br>
+		<b>For the Music Centre's own events, Members' ticket discounts can be as high as 50%!</b><br><br>
+		The Music Centre is also registered as a Deductible Gift Recipient. Any extra donations are tax-deductible!<br>
+		To become a Member, or to update an existing Membership Sign Up here<br>
+		</p>
+		
+	</center>
+	</div>
+</div>
+
+
+
+
+<div id="footer">
+Copyright Received
+</div>
+<script >
+	console.log("abc");
+
+	if (!(localStorage.getItem("username") == null)) {
+		document.getElementById("login").innerHTML ="<h3 style='color:#000000'>Welcome,"+ localStorage.getItem("username")+"</h3>"+"<button onclick="+"logout()"+">Logout</button>";
+	}
+
+function save(){
+	var x = document.getElementById("username").value;
+	localStorage.setItem("username", x);
+	location.reload();
+
+}
+function logout(){
+	localStorage.removeItem("username");
+	console.log("clear");
+	location.reload();
+}
+function btntest_onclick()
+{
+    window.location.href = "membersarea.html";
+}
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+</body>
+<footer></footer>
+</div>
+</html>
